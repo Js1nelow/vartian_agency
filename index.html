@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vartian Agency | Главная</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- НАВИГАЦИЯ -->
+    <nav>
+        <div class="logo">Vartian Agency</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Главная</a>
+            <a href="portfolio.html">Работы</a>
+            <a href="prices.html">Прайс</a>
+        </div>
+    </nav>
+
+    <!-- ГЛАВНЫЙ ЭКРАН -->
+    <header class="hero">
+        <h1 data-aos="zoom-out">ЭСТЕТИКА, КОТОРАЯ <br><span>ПРОДАЕТ ВАС ВСЕМ</span></h1>
+        <p data-aos="fade-up" data-aos-delay="400">Vartian Agency: создаем высококонверсионный контент для брендов и бизнеса. Мы стираем границы между воображением и реальностью.</p>
+        <div class="hero-btns" data-aos="fade-up" data-aos-delay="600">
+            <a href="portfolio.html" class="btn-main">Смотреть кейсы</a>
+            <a href="prices.html" class="btn-outline">Узнать стоимость</a>
+        </div>
+    </header>
+
+    <!-- БЛОК С ФОТО 17.JPG -->
+    <section class="about-section">
+        <div class="about-content">
+            <div class="text-block" data-aos="fade-right">
+                <span class="tag">Vartian Agency</span>
+                <h2>Хватит тратить миллионы на контент, который не цепляет</h2>
+                <p>Классические съемки — это дорого, долго и часто не окупается. Мы в Vartian Agency закрываем главную боль брендов: создаем <b>продающий контент</b> мирового уровня без раздутых бюджетов.</p>
+                <p>Пока ваши конкуренты неделями ждут моделей и ищут студии, мы упаковываем ваш продукт в визуал, который цепляет взгляд и конвертирует охваты в продажи за считанные дни.</p>
+            </div>
+            <div class="image-placeholder" data-aos="fade-left">
+                <!-- Твоя картинка 17.jpg -->
+                <img src="img/17.jpg" alt="Vartian Agency Visual">
+            </div>
+        </div>
+    </section>
+
+    <!-- ПРЕИМУЩЕСТВА -->
+    <section class="benefits">
+        <div class="section-title-styled" data-aos="fade-up">
+            <span class="tag">WHY US</span>
+            <h2>ПОЧЕМУ ВЫБИРАЮТ НАС?</h2>
+        </div>
+        <div class="benefit-grid">
+            <div class="benefit-card" data-aos="flip-up"><h3>Тотальная окупаемость</h3><p>Вы получаете визуал мирового уровня без затрат на аренду и моделей. Максимальная маржа вашего бизнеса.</p></div>
+            <div class="benefit-card" data-aos="flip-up" data-aos-delay="200"><h3>Визуальное доминирование</h3><p>Наш контент спроектирован так, чтобы ваши соцсети разрывали алгоритмы за 0.5 секунды.</p></div>
+            <div class="benefit-card" data-aos="flip-up" data-aos-delay="400"><h3>Абсолютная свобода</h3><p>Реализуем любые идеи в любых пространствах. Мы не ограничены физической реальностью.</p></div>
+        </div>
+    </section>
+
+    <!-- МАНИФЕСТ -->
+    <section class="manifesto">
+        <div class="manifesto-box" data-aos="zoom-in">
+            <span class="alert">MUST HAVE</span>
+            <h2>НЕЙРОСЕТИ — ЭТО БАЗА</h2>
+            <p>Рынок перенасыщен обычным контентом. Сегодня продает только технологичность и безупречный стиль. Либо вы переходите на AI-продакшн с Vartian Agency сейчас, либо завтра ваш проект станет невидимым для рынка.</p>
+            <a href="https://t.me/official_vartian" target="_blank" class="btn-main">ОБСУДИТЬ ПРОДАКШН</a>
+        </div>
+    </section>
+
+    <!-- ЮРИДИЧЕСКИЙ БЛОК -->
+    <div class="legal-footer">
+        <button class="legal-btn" onclick="openModal('oferta')">Публичная оферта</button>
+        <button class="legal-btn" onclick="openModal('agreement')">Пользовательское соглашение</button>
+    </div>
+
+    <!-- МОДАЛКИ С ПОЛНЫМ ТЕКСТОМ -->
+    <div id="oferta" class="modal-overlay" onclick="closeModal('oferta')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal('oferta')">&times;</button>
+            <h2 style="margin-bottom:25px;">ПУБЛИЧНАЯ ОФЕРТА</h2>
+            <p>Настоящая оферта является официальным предложением Леонида Вартиана (далее — Исполнитель) для любого физического или юридического лица (далее — Заказчик) заключить договор на оказание услуг по генерации AI-визуала.</p>
+            <p><b>1. Предмет договора:</b> Создание цифровых изображений и видеороликов с использованием нейросетей по техническому заданию Заказчика.</p>
+            <p><b>2. Оплата:</b> Услуги оказываются на условиях 100% предоплаты, если иное не оговорено индивидуально.</p>
+            <p><b>3. Права:</b> Все исключительные права на финальные изображения переходят к Заказчику после полной оплаты.</p>
+        </div>
+    </div>
+    <div id="agreement" class="modal-overlay" onclick="closeModal('agreement')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal('agreement')">&times;</button>
+            <h2 style="margin-bottom:25px;">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</h2>
+            <p>Используя данный сайт, вы соглашаетесь с условиями использования материалов и политикой конфиденциальности.</p>
+            <p><b>1.</b> Сайт носит информационный характер и представляет портфолио AI-креатора Леонида Вартиана.</p>
+            <p><b>2.</b> Копирование и использование изображений из раздела "Портфолио" без разрешения автора запрещено.</p>
+            <p><b>3.</b> Исполнитель не несет ответственности за то, как Заказчик использует сгенерированный контент в дальнейшем.</p>
+        </div>
+    </div>
+
+    <footer></footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000 });
+        function openModal(id) { 
+            const m = document.getElementById(id);
+            if(m) { m.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+        }
+        function closeModal(id) { 
+            const m = document.getElementById(id);
+            if(m) { m.style.display = 'none'; document.body.style.overflow = 'auto'; }
+        }
+    </script>
+</body>
+</html>

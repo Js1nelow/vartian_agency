@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прайс | Vartian Agency</title>
+    
+    <!-- Премиальный шрифт Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Анимации AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Твой файл стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- НАВИГАЦИЯ -->
+    <nav>
+        <div class="logo">Vartian Agency</div>
+        <div class="nav-links">
+            <a href="index.html">Главная</a>
+            <a href="portfolio.html">Работы</a>
+            <a href="prices.html" class="active">Прайс</a>
+        </div>
+    </nav>
+
+    <section class="content-page">
+        <!-- ГЛАВНЫЙ ЗАГОЛОВОК -->
+        <header class="page-header" data-aos="fade-down">
+            <span class="tag">INVESTMENT</span>
+            <h1>СТОИМОСТЬ ПРОДАКШНА</h1>
+            <p style="color:var(--text-dim); font-size:1.2rem; margin-top:10px;">Прозрачное ценообразование для проектов любого масштаба.</p>
+        </header>
+
+        <!-- БАЗОВЫЕ УСЛУГИ -->
+        <div class="price-grid">
+            <div class="price-card" data-aos="fade-right">
+                <span class="category">STATIC CONTENT</span>
+                <h3>ИИ-Фотография</h3>
+                <div class="cost">от 1 300 ₽</div>
+                <ul>
+                    <li>1 фото: 1 500 ₽ / шт. (работаем от 4 фото)</li>
+                    <li>5 фото: 7 000 ₽</li>
+                    <li>От 10 фото и более: 1 300₽ / шт.</li>
+                    <li>Работа по вашему ТЗ + 1 раунд правок</li>
+                </ul>
+            </div>
+
+            <div class="price-card" data-aos="fade-left">
+                <span class="category">MOTION PRODUCTION</span>
+                <h3>ИИ-Видео</h3>
+                <div class="cost">от 2 500 ₽</div>
+                <ul>
+                    <li>первые 10 сек.: 500 ₽ / сек. (работаем от 5 сек.)</li>
+                    <li>последующие сек.: 750 ₽ / сек.</li>
+                    <li>Генерация и анимация (оживление)</li>
+                    <li>Саунд-дизайн включен</li>
+                    <li>1 раунд правок</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ЦЕНТРАЛЬНЫЙ ЗАГОЛОВОК ПАКОВ -->
+        <div class="price-section-title" data-aos="fade-up">
+            <span class="tag">PACKAGES</span>
+            <h2>КОМПЛЕКСНЫЕ ПАКИ</h2>
+        </div>
+
+        <!-- СЕТКА ПАКОВ -->
+        <div class="price-grid">
+            <div class="price-card" data-aos="zoom-in">
+                <h3>Пак №1: Тест-драйв</h3>
+                <div class="cost">5 000 ₽</div>
+                <ul><li>4 готовых изображения</li><li>Работа по вашему ТЗ</li><li>1 раунд правок</li></ul>
+            </div>
+            <div class="price-card" data-aos="zoom-in" data-aos-delay="100">
+                <h3>Пак №2: Lookbook</h3>
+                <div class="cost">18 500 ₽</div>
+                <ul><li>15 детальных фото</li><li>Работа по вашему ТЗ</li><li>Интеграция продукта</li></ul>
+            </div>
+            <div class="price-card exclusive" data-aos="zoom-in" data-aos-delay="200">
+                <div class="badge" style="position:absolute; top:20px; right:20px; background:var(--accent); color:#fff; padding:5px 12px; border-radius:6px; font-size:0.6rem; font-weight:900;">BEST DEAL</div>
+                <h3>Пак №3: Эксклюзив</h3>
+                <div class="cost">29 000 ₽</div>
+                <ul><li>10 фото + 2 видео (по 15 сек.)</li><li>Работа по вашему ТЗ</li><li>Концепция "под ключ"</li></ul>
+            </div>
+        </div>
+
+        <!-- ФИНАЛЬНЫЙ CTA -->
+        <div class="modern-cta" data-aos="zoom-in">
+            <span class="cta-tag">Ready to dominate?</span>
+            <h2>ВАШ ПРОЕКТ — <br><span>СЛЕДУЮЩИЙ</span></h2>
+            <div class="cta-action">
+                <p>Создадим визуал, который заберет всё внимание рынка.</p>
+                <a href="https://t.me/official_vartian" target="_blank" class="btn-main">ОБСУДИТЬ СОТРУДНИЧЕСТВО</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ЮРИДИЧЕСКИЙ БЛОК -->
+    <div class="legal-footer">
+        <button class="legal-btn" onclick="openModal('oferta')">Публичная оферта</button>
+        <button class="legal-btn" onclick="openModal('agreement')">Пользовательское соглашение</button>
+    </div>
+
+    <!-- МОДАЛКИ С ПОЛНЫМ ПРАВИЛЬНЫМ ТЕКСТОМ -->
+    <div id="oferta" class="modal-overlay" onclick="closeModal('oferta')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal('oferta')">&times;</button>
+            <h2 style="margin-bottom:25px;">ПУБЛИЧНАЯ ОФЕРТА</h2>
+            <p>Настоящая оферта является официальным предложением Леонида Вартиана (далее — Исполнитель) для любого физического или юридического лица (далее — Заказчик) заключить договор на оказание услуг по генерации AI-визуала.</p>
+            <p><b>1. Предмет договора:</b> Создание цифровых изображений и видеороликов с использованием нейросетей по техническому заданию Заказчика.</p>
+            <p><b>2. Оплата:</b> Услуги оказываются на условиях 100% предоплаты, если иное не оговорено индивидуально.</p>
+            <p><b>3. Права:</b> Все исключительные права на финальные изображения переходят к Заказчику после полной оплаты.</p>
+        </div>
+    </div>
+
+    <div id="agreement" class="modal-overlay" onclick="closeModal('agreement')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal('agreement')">&times;</button>
+            <h2 style="margin-bottom:25px;">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</h2>
+            <p>Используя данный сайт, вы соглашаетесь с условиями использования материалов и политикой конфиденциальности.</p>
+            <p><b>1.</b> Сайт носит информационный характер и представляет портфолио AI-креатора Леонида Вартиана.</p>
+            <p><b>2.</b> Копирование и использование изображений из раздела "Портфолио" без разрешения автора запрещено.</p>
+            <p><b>3.</b> Исполнитель не несет ответственности за то, как Заказчик использует сгенерированный контент в дальнейшем.</p>
+        </div>
+    </div>
+
+    <!-- СКРИПТЫ -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000 });
+
+        function openModal(id) {
+            const m = document.getElementById(id);
+            if (m) {
+                m.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Блокируем скролл сайта
+            }
+        }
+
+        function closeModal(id) {
+            const m = document.getElementById(id);
+            if (m) {
+                m.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Возвращаем скролл
+            }
+        }
+    </script>
+</body>
+</html>
