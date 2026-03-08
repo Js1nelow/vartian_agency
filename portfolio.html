@@ -3,164 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Работы | Vartian Agency</title>
-    
-    <!-- Премиальный шрифт Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    
-    <!-- Анимации AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Твой файл стилей -->
+    <title>Кейсы | Vartian Agency</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <header class="nav-container">
+        <a href="index.html" class="logo">Vartian Agency</a>
+        <div class="menu-btn" id="menuToggle"><span></span><span></span><span></span></div>
+    </header>
 
-    <!-- НАВИГАЦИЯ: Liquid Glass (Работы активны) -->
-    <nav>
-        <div class="logo">Vartian Agency</div>
-        <div class="nav-links">
-            <a href="index.html">Главная</a>
-            <a href="portfolio.html" class="active">Работы</a>
-            <a href="prices.html">Прайс</a>
-        </div>
-    </nav>
+    <div class="full-menu" id="fullMenu">
+        <a href="portfolio.html">Кейсы</a>
+        <a href="prices.html">Услуги</a>
+        <a href="https://t.me/official_vartian" target="_blank">Контакты</a>
+    </div>
 
     <section class="content-page">
-        <!-- Шапка страницы -->
         <header class="page-header" data-aos="fade-down">
             <span class="tag">Selection</span>
             <h1>КЕЙСЫ И ГЕНЕРАЦИИ</h1>
-            <p>Визуал мирового уровня, созданный на стыке технологий и эстетики.</p>
         </header>
 
-        <!-- ГРИД РАБОТ (3 колонки x 5 рядов = 15 работ) -->
         <div class="portfolio-grid">
-            
-            <!-- РЯД 1 -->
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="item-overlay"><span>ART 1</span></div>
-                <img src="img/1.jpg" alt="Vartian Agency Work 1">
-            </div>
-            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
-                <div class="item-overlay"><span>ART 2</span></div>
-                <img src="img/2.jpg" alt="Vartian Agency Work 2">
-            </div>
-            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
-                <div class="item-overlay"><span>ART 3</span></div>
-                <img src="img/3.jpg" alt="Vartian Agency Work 3">
-            </div>
-
-            <!-- РЯД 2 -->
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="item-overlay"><span>ART 4</span></div>
-                <img src="img/4.jpg" alt="Vartian Agency Work 4">
-            </div>
-            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
-                <div class="item-overlay"><span>ART 5</span></div>
-                <img src="img/5.jpg" alt="Vartian Agency Work 5">
-            </div>
-            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
-                <div class="item-overlay"><span>ART 6</span></div>
-                <img src="img/6.jpg" alt="Vartian Agency Work 6">
-            </div>
-
-            <!-- РЯД 3 -->
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="item-overlay"><span>ART 7</span></div>
-                <img src="img/7.jpg" alt="Vartian Agency Work 7">
-            </div>
-            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
-                <div class="item-overlay"><span>ART 8</span></div>
-                <img src="img/8.jpg" alt="Vartian Agency Work 8">
-            </div>
-            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
-                <div class="item-overlay"><span>ART 9</span></div>
-                <img src="img/9.jpg" alt="Vartian Agency Work 9">
-            </div>
-
-            <!-- РЯД 4 -->
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="item-overlay"><span>ART 10</span></div>
-                <img src="img/10.jpg" alt="Vartian Agency Work 10">
-            </div>
-            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
-                <div class="item-overlay"><span>ART 11</span></div>
-                <img src="img/11.jpg" alt="Vartian Agency Work 11">
-            </div>
-            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
-                <div class="item-overlay"><span>ART 12</span></div>
-                <img src="img/12.jpg" alt="Vartian Agency Work 12">
-            </div>
-
-            <!-- РЯД 5 (НОВЫЙ) -->
-            <div class="portfolio-item" data-aos="fade-up">
-                <div class="item-overlay"><span>ART 13</span></div>
-                <img src="img/13.jpg" alt="Vartian Agency Work 13">
-            </div>
-            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
-                <div class="item-overlay"><span>ART 14</span></div>
-                <img src="img/14.jpg" alt="Vartian Agency Work 14">
-            </div>
-            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
-                <div class="item-overlay"><span>ART 15</span></div>
-                <img src="img/15.jpg" alt="Vartian Agency Work 15">
-            </div>
-
+            <div class="portfolio-item" data-aos="fade-up"><div class="item-overlay"><span>ART 1</span></div><img src="img/1.jpg"></div>
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100"><div class="item-overlay"><span>ART 2</span></div><img src="img/2.jpg"></div>
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200"><div class="item-overlay"><span>ART 3</span></div><img src="img/3.jpg"></div>
+            <div class="portfolio-item" data-aos="fade-up"><div class="item-overlay"><span>ART 4</span></div><img src="img/4.jpg"></div>
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100"><div class="item-overlay"><span>ART 5</span></div><img src="img/5.jpg"></div>
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200"><div class="item-overlay"><span>ART 6</span></div><img src="img/6.jpg"></div>
+            <div class="portfolio-item" data-aos="fade-up"><div class="item-overlay"><span>ART 7</span></div><img src="img/7.jpg"></div>
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100"><div class="item-overlay"><span>ART 8</span></div><img src="img/8.jpg"></div>
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200"><div class="item-overlay"><span>ART 9</span></div><img src="img/9.jpg"></div>
+            <div class="portfolio-item" data-aos="fade-up"><div class="item-overlay"><span>ART 10</span></div><img src="img/10.jpg"></div>
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100"><div class="item-overlay"><span>ART 11</span></div><img src="img/11.jpg"></div>
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200"><div class="item-overlay"><span>ART 12</span></div><img src="img/12.jpg"></div>
+            <div class="portfolio-item" data-aos="fade-up"><div class="item-overlay"><span>ART 13</span></div><img src="img/13.jpg"></div>
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100"><div class="item-overlay"><span>ART 14</span></div><img src="img/14.jpg"></div>
+            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200"><div class="item-overlay"><span>ART 15</span></div><img src="img/15.jpg"></div>
         </div>
     </section>
 
-    <!-- ЮРИДИЧЕСКИЙ БЛОК -->
     <div class="legal-footer">
-        <button class="legal-btn" onclick="openModal('oferta')">Публичная оферта</button>
-        <button class="legal-btn" onclick="openModal('agreement')">Пользовательское соглашение</button>
+        <div class="legal-links">
+            <button class="legal-btn" onclick="openModal('oferta')">Публичная оферта</button>
+            <button class="legal-btn" onclick="openModal('agreement')">Правила агентства</button>
+        </div>
+        <div class="copyright">© 2026 VARTIAN AGENCY. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</div>
     </div>
 
-    <!-- МОДАЛКА: ОФЕРТА -->
+    <!-- МОДАЛКИ (БЕЗ СОКРАЩЕНИЙ) -->
     <div id="oferta" class="modal-overlay" onclick="closeModal('oferta')">
         <div class="modal-content" onclick="event.stopPropagation()">
             <button class="modal-close" onclick="closeModal('oferta')">&times;</button>
-            <h2 style="margin-bottom:25px;">ПУБЛИЧНАЯ ОФЕРТА</h2>
-            <p>Настоящая оферта является официальным предложением Леонида Вартиана (далее — Исполнитель) для любого физического или юридического лица (далее — Заказчик) заключить договор на оказание услуг по генерации AI-визуала.</p>
-            <p><b>1. Предмет договора:</b> Создание цифровых изображений и видеороликов с использованием нейросетей по техническому заданию Заказчика.</p>
-            <p><b>2. Оплата:</b> Услуги оказываются на условиях 100% предоплаты, если иное не оговорено индивидуально.</p>
-            <p><b>3. Права:</b> Все исключительные права на финальные изображения переходят к Заказчику после полной оплаты.</p>
+            <h2>ПУБЛИЧНАЯ ОФЕРТА</h2>
+            <p>Настоящий документ является официальным предложением (Публичной офертой) агентства <b>VARTIAN AGENCY</b> (далее — Исполнитель) по оказанию услуг генерации визуального контента на базе технологий Искусственного Интеллекта.</p>
+            <h3>1. ПРЕДМЕТ СОГЛАШЕНИЯ</h3><p>Исполнитель обязуется оказать услуги по созданию цифровых изображений и/или видеороликов в соответствии с Техническим Заданием (ТЗ) Заказчика, а Заказчик обязуется оплатить эти услуги.</p>
+            <h3>2. УСЛОВИЯ ОПЛАТЫ И ВОЗВРАТА</h3><ul><li>Услуги оказываются на условиях 100% предварительной оплаты.</li><li>Ввиду специфики использования вычислительных мощностей и затрат токенов нейросетей, денежные средства становятся <b>безвозвратными</b> сразу после начала процесса генерации (стадия «Render»).</li><li>Отказ от услуг после начала работы не влечет за собой возврат оплаты.</li></ul>
+            <h3>3. ОСОБЕННОСТИ ТЕХНОЛОГИИ</h3><p>Заказчик осознает, что ИИ-генерация является вероятностным процессом. Возможные визуальные артефакты признаются допустимыми и устраняются Исполнителем строго в рамках оговоренных раундов правок.</p>
+            <h3>4. ИНТЕЛЛЕКТУАЛЬНЫЕ ПРАВА</h3><p>Исключительные права на использование материалов переходят к Заказчику только <b>после 100% оплаты</b>. Исполнитель сохраняет право на размещение работ в портфолио.</p>
         </div>
     </div>
-
-    <!-- МОДАЛКА: СОГЛАШЕНИЕ -->
     <div id="agreement" class="modal-overlay" onclick="closeModal('agreement')">
         <div class="modal-content" onclick="event.stopPropagation()">
             <button class="modal-close" onclick="closeModal('agreement')">&times;</button>
-            <h2 style="margin-bottom:25px;">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</h2>
-            <p>Используя данный сайт, вы соглашаетесь с условиями использования материалов и политикой конфиденциальности.</p>
-            <p><b>1.</b> Сайт носит информационный характер и представляет портфолио AI-креатора Леонида Вартиана.</p>
-            <p><b>2.</b> Копирование и использование изображений из раздела "Портфолио" без разрешения автора запрещено.</p>
-            <p><b>3.</b> Исполнитель не несет ответственности за то, как Заказчик использует сгенерированный контент в дальнейшем.</p>
+            <h2>ПРАВИЛА АГЕНТСТВА</h2>
+            <h3>1. ОБЩИЕ ПОЛОЖЕНИЯ</h3><p>Сайт VARTIAN AGENCY является витриной услуг и портфолио Леонида Вартиана. Используя ресурс, вы подтверждаете свое согласие с данными правилами.</p>
+            <h3>2. СБОР И ХРАНЕНИЕ ДАННЫХ</h3><p>Мы собираем только те данные, которые вы предоставляете добровольно (имя, ниша, контакт). Мы гарантируем, что ваши контакты <b>не будут переданы</b> третьим лицам.</p>
+            <h3>3. ОТВЕТСТВЕННОСТЬ</h3><p>Исполнитель не несет ответственности за использование Заказчиком контента в целях, нарушающих законодательство страны Заказчика.</p>
         </div>
     </div>
 
-    <footer></footer>
-
-    <!-- Скрипты -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000 });
-
-        function openModal(id) { 
-            const m = document.getElementById(id);
-            if(m) { 
-                m.style.display = 'flex'; 
-                document.body.style.overflow = 'hidden'; 
-            }
-        }
-        function closeModal(id) { 
-            const m = document.getElementById(id);
-            if(m) { 
-                m.style.display = 'none'; 
-                document.body.style.overflow = 'auto'; 
-            }
-        }
+        AOS.init({ duration: 1000, once: false });
+        const menuBtn = document.getElementById('menuToggle');
+        const fullMenu = document.getElementById('fullMenu');
+        menuBtn.onclick = () => { menuBtn.classList.toggle('active'); fullMenu.classList.toggle('active'); document.body.style.overflow = fullMenu.classList.contains('active') ? 'hidden' : 'auto'; };
+        function openModal(id) { document.getElementById(id).style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+        function closeModal(id) { document.getElementById(id).style.display = 'none'; document.body.style.overflow = 'auto'; }
     </script>
 </body>
 </html>

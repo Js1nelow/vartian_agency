@@ -3,92 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Прайс | Vartian Agency</title>
-    
-    <!-- Премиальный шрифт Inter -->
+    <title>Услуги | Vartian Agency</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    
-    <!-- Анимации AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Твой файл стилей -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="nav-container">
+        <a href="index.html" class="logo">Vartian Agency</a>
+        <div class="menu-btn" id="menuToggle"><span></span><span></span><span></span></div>
+    </header>
 
-    <!-- НАВИГАЦИЯ -->
-    <nav>
-        <div class="logo">Vartian Agency</div>
-        <div class="nav-links">
-            <a href="index.html">Главная</a>
-            <a href="portfolio.html">Работы</a>
-            <a href="prices.html" class="active">Прайс</a>
-        </div>
-    </nav>
+    <div class="full-menu" id="fullMenu">
+        <a href="portfolio.html">Кейсы</a>
+        <a href="prices.html">Услуги</a>
+        <a href="https://t.me/official_vartian" target="_blank">Контакты</a>
+    </div>
 
     <section class="content-page">
-        <!-- ГЛАВНЫЙ ЗАГОЛОВОК -->
         <header class="page-header" data-aos="fade-down">
-            <span class="tag">INVESTMENT</span>
-            <h1>СТОИМОСТЬ ПРОДАКШНА</h1>
-            <p style="color:var(--text-dim); font-size:1.2rem; margin-top:10px;">Прозрачное ценообразование для проектов любого масштаба.</p>
+            <span class="tag">Investment</span>
+            <h1>СТОИМОСТЬ РЕШЕНИЙ</h1>
         </header>
 
-        <!-- БАЗОВЫЕ УСЛУГИ -->
-        <div class="price-grid">
+        <!-- ВЕРХНИЙ ГРИД (2 БЛОКА) -->
+        <div class="price-grid-top">
             <div class="price-card" data-aos="fade-right">
-                <span class="category">STATIC CONTENT</span>
-                <h3>ИИ-Фотография</h3>
-                <div class="cost">от 1 300 ₽</div>
+                <span class="tag">Static</span>
+                <h3>AI-Фото</h3>
+                <div class="cost">1500 ₽/шт (от 4 шт.)</div>
                 <ul>
-                    <li>1 фото: 1 500 ₽ / шт. (работаем от 4 фото)</li>
-                    <li>5 фото: 7 000 ₽</li>
-                    <li>От 10 фото и более: 1 300₽ / шт.</li>
-                    <li>Работа по вашему ТЗ + 1 раунд правок</li>
+                    <li>От 10 фото: 1299 ₽/шт</li>
+                    <li>Работа строго по вашему ТЗ и референсам</li>
+                    <li>Композиционная ретушь и цветокоррекция</li>
+                    <li>1 раунд правок</li>
                 </ul>
             </div>
-
             <div class="price-card" data-aos="fade-left">
-                <span class="category">MOTION PRODUCTION</span>
-                <h3>ИИ-Видео</h3>
+                <span class="tag">Motion</span>
+                <h3>AI-Видео</h3>
                 <div class="cost">от 2 500 ₽</div>
                 <ul>
-                    <li>первые 10 сек.: 500 ₽ / сек. (работаем от 5 сек.)</li>
-                    <li>последующие сек.: 750 ₽ / сек.</li>
-                    <li>Генерация и анимация (оживление)</li>
-                    <li>Саунд-дизайн включен</li>
+                    <li>Первые 10 сек: 500 ₽/сек. (дальше 750 ₽/сек.)</li>
+                    <li>Генерация, анимация (оживление), монтаж</li>
+                    <li>Профессиональный саунд-дизайн и звук</li>
                     <li>1 раунд правок</li>
                 </ul>
             </div>
         </div>
 
-        <!-- ЦЕНТРАЛЬНЫЙ ЗАГОЛОВОК ПАКОВ -->
+        <!-- ЦЕНТРИРОВАННЫЙ ЗАГОЛОВОК -->
         <div class="price-section-title" data-aos="fade-up">
             <span class="tag">PACKAGES</span>
             <h2>КОМПЛЕКСНЫЕ ПАКИ</h2>
         </div>
 
-        <!-- СЕТКА ПАКОВ -->
+        <!-- ГРИД ПАКОВ (6 БЛОКОВ, 3 В РЯДУ) -->
         <div class="price-grid">
             <div class="price-card" data-aos="zoom-in">
                 <h3>Пак №1: Тест-драйв</h3>
-                <div class="cost">5 000 ₽</div>
-                <ul><li>4 готовых изображения</li><li>Работа по вашему ТЗ</li><li>1 раунд правок</li></ul>
+                <div class="cost">3 000 ₽</div>
+                <ul><li>3 изображения</li><li>1 раунд правок</li></ul>
             </div>
             <div class="price-card" data-aos="zoom-in" data-aos-delay="100">
-                <h3>Пак №2: Lookbook</h3>
-                <div class="cost">18 500 ₽</div>
-                <ul><li>15 детальных фото</li><li>Работа по вашему ТЗ</li><li>Интеграция продукта</li></ul>
+                <h3>Пак №2: Контент-старт</h3>
+                <div class="cost">от 10 000 ₽</div>
+                <ul><li>7 детальных фото</li><li>Единая концепция бренда</li></ul>
             </div>
-            <div class="price-card exclusive" data-aos="zoom-in" data-aos-delay="200">
-                <div class="badge" style="position:absolute; top:20px; right:20px; background:var(--accent); color:#fff; padding:5px 12px; border-radius:6px; font-size:0.6rem; font-weight:900;">BEST DEAL</div>
-                <h3>Пак №3: Эксклюзив</h3>
-                <div class="cost">29 000 ₽</div>
-                <ul><li>10 фото + 2 видео (по 15 сек.)</li><li>Работа по вашему ТЗ</li><li>Концепция "под ключ"</li></ul>
+            <div class="price-card" data-aos="zoom-in" data-aos-delay="200">
+                <h3>Пак №3: Lookbook</h3>
+                <div class="cost">от 20 000 ₽</div>
+                <ul><li>15 детальных фото</li><li>Интеграция продукта</li></ul>
+            </div>
+            <div class="price-card" data-aos="zoom-in">
+                <h3>Пак №4: Reels-промо</h3>
+                <div class="cost">от 30 000 ₽</div>
+                <ul><li>3 динамичных ролика</li><li>Индивидуальный монтаж</li></ul>
+            </div>
+            <div class="price-card exclusive" data-aos="zoom-in" data-aos-delay="100">
+                <div class="badge">BEST DEAL</div>
+                <h3>Пак №5: Эксклюзив</h3>
+                <div class="cost">от 45 000 ₽</div>
+                <ul><li>10 фото + 2 видео</li><li>Концепция "под ключ"</li></ul>
+            </div>
+            <div class="price-card" data-aos="zoom-in" data-aos-delay="200">
+                <h3>Пак №6: Brand AI</h3>
+                <div class="cost">от 60 000 ₽</div>
+                <ul><li>Полная упаковка бренда</li><li>30 фото + 5 видео</li></ul>
             </div>
         </div>
 
-        <!-- ФИНАЛЬНЫЙ CTA -->
         <div class="modern-cta" data-aos="zoom-in">
             <span class="cta-tag">Ready to dominate?</span>
             <h2>ВАШ ПРОЕКТ — <br><span>СЛЕДУЮЩИЙ</span></h2>
@@ -99,55 +103,45 @@
         </div>
     </section>
 
-    <!-- ЮРИДИЧЕСКИЙ БЛОК -->
     <div class="legal-footer">
-        <button class="legal-btn" onclick="openModal('oferta')">Публичная оферта</button>
-        <button class="legal-btn" onclick="openModal('agreement')">Пользовательское соглашение</button>
+        <div class="legal-links">
+            <button class="legal-btn" onclick="openModal('oferta')">Публичная оферта</button>
+            <button class="legal-btn" onclick="openModal('agreement')">Правила агентства</button>
+        </div>
+        <div class="copyright">© 2026 VARTIAN AGENCY. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</div>
     </div>
 
-    <!-- МОДАЛКИ С ПОЛНЫМ ПРАВИЛЬНЫМ ТЕКСТОМ -->
+    <!-- МОДАЛКИ (ПОЛНЫЕ) -->
     <div id="oferta" class="modal-overlay" onclick="closeModal('oferta')">
         <div class="modal-content" onclick="event.stopPropagation()">
             <button class="modal-close" onclick="closeModal('oferta')">&times;</button>
-            <h2 style="margin-bottom:25px;">ПУБЛИЧНАЯ ОФЕРТА</h2>
-            <p>Настоящая оферта является официальным предложением Леонида Вартиана (далее — Исполнитель) для любого физического или юридического лица (далее — Заказчик) заключить договор на оказание услуг по генерации AI-визуала.</p>
-            <p><b>1. Предмет договора:</b> Создание цифровых изображений и видеороликов с использованием нейросетей по техническому заданию Заказчика.</p>
-            <p><b>2. Оплата:</b> Услуги оказываются на условиях 100% предоплаты, если иное не оговорено индивидуально.</p>
-            <p><b>3. Права:</b> Все исключительные права на финальные изображения переходят к Заказчику после полной оплаты.</p>
+            <h2>ПУБЛИЧНАЯ ОФЕРТА</h2>
+            <p>Настоящий документ является официальным предложением (Публичной офертой) агентства <b>VARTIAN AGENCY</b> (далее — Исполнитель) по оказанию услуг генерации визуального контента на базе технологий Искусственного Интеллекта.</p>
+            <h3>1. ПРЕДМЕТ СОГЛАШЕНИЯ</h3><p>Исполнитель обязуется оказать услуги по созданию цифровых изображений и/или видеороликов в соответствии с Техническим Заданием (ТЗ) Заказчика, а Заказчик обязуется оплатить эти услуги.</p>
+            <h3>2. УСЛОВИЯ ОПЛАТЫ И ВОЗВРАТА</h3><ul><li>Услуги оказываются на условиях 100% предварительной оплаты.</li><li>Ввиду специфики использования вычислительных мощностей, денежные средства становятся <b>безвозвратными</b> сразу после начала процесса генерации (стадия «Render»).</li><li>Отказ от услуг после начала работы не влечет за собой возврат оплаты.</li></ul>
+            <h3>3. ОСОБЕННОСТИ ТЕХНОЛОГИИ</h3><p>Заказчик осознает, что ИИ-генерация является вероятностным процессом. Возможные визуальные артефакты признаются допустимыми и устраняются Исполнителем в рамках правок.</p>
+            <h3>4. ИНТЕЛЛЕКТУАЛЬНЫЕ ПРАВА</h3><p>Исключительные права на использование материалов переходят к Заказчику только <b>после 100% оплаты</b>. Исполнитель сохраняет право на размещение работ в портфолио.</p>
         </div>
     </div>
 
     <div id="agreement" class="modal-overlay" onclick="closeModal('agreement')">
         <div class="modal-content" onclick="event.stopPropagation()">
             <button class="modal-close" onclick="closeModal('agreement')">&times;</button>
-            <h2 style="margin-bottom:25px;">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</h2>
-            <p>Используя данный сайт, вы соглашаетесь с условиями использования материалов и политикой конфиденциальности.</p>
-            <p><b>1.</b> Сайт носит информационный характер и представляет портфолио AI-креатора Леонида Вартиана.</p>
-            <p><b>2.</b> Копирование и использование изображений из раздела "Портфолио" без разрешения автора запрещено.</p>
-            <p><b>3.</b> Исполнитель не несет ответственности за то, как Заказчик использует сгенерированный контент в дальнейшем.</p>
+            <h2>ПРАВИЛА АГЕНТСТВА</h2>
+            <h3>1. ОБЩИЕ ПОЛОЖЕНИЯ</h3><p>Сайт VARTIAN AGENCY является витриной услуг и портфолио AI-креатора Леонида Вартиана. Используя ресурс, вы подтверждаете свое согласие с данными правилами.</p>
+            <h3>2. СБОР И ХРАНЕНИЕ ДАННЫХ</h3><ul><li>Мы собираем только те данные, которые вы предоставляете добровольно.</li><li>Персональные данные используются исключительно для связи по вашему проекту.</li><li>Мы гарантируем, что ваши контакты <b>не будут переданы</b> третьим лицам.</li></ul>
+            <h3>3. ОТВЕТСТВЕННОСТЬ</h3><p>Исполнитель не несет ответственности за использование Заказчиком сгенерированного контента в целях, нарушающих законодательство.</p>
         </div>
     </div>
 
-    <!-- СКРИПТЫ -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000 });
-
-        function openModal(id) {
-            const m = document.getElementById(id);
-            if (m) {
-                m.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // Блокируем скролл сайта
-            }
-        }
-
-        function closeModal(id) {
-            const m = document.getElementById(id);
-            if (m) {
-                m.style.display = 'none';
-                document.body.style.overflow = 'auto'; // Возвращаем скролл
-            }
-        }
+        AOS.init({ duration: 1000, once: false });
+        const menuBtn = document.getElementById('menuToggle');
+        const fullMenu = document.getElementById('fullMenu');
+        menuBtn.onclick = () => { menuBtn.classList.toggle('active'); fullMenu.classList.toggle('active'); document.body.style.overflow = fullMenu.classList.contains('active') ? 'hidden' : 'auto'; };
+        function openModal(id) { document.getElementById(id).style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+        function closeModal(id) { document.getElementById(id).style.display = 'none'; document.body.style.overflow = 'auto'; }
     </script>
 </body>
 </html>

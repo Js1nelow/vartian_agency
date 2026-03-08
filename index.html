@@ -3,112 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vartian Agency | Главная</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Vartian Agency | Revolution</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- НАВИГАЦИЯ -->
-    <nav>
-        <div class="logo">Vartian Agency</div>
-        <div class="nav-links">
-            <a href="index.html" class="active">Главная</a>
-            <a href="portfolio.html">Работы</a>
-            <a href="prices.html">Прайс</a>
-        </div>
-    </nav>
 
-    <!-- ГЛАВНЫЙ ЭКРАН -->
+    <header class="nav-container">
+        <a href="index.html" class="logo">Vartian Agency</a>
+        <div class="menu-btn" id="menuToggle"><span></span><span></span><span></span></div>
+    </header>
+
+    <div class="full-menu" id="fullMenu">
+        <a href="portfolio.html">Кейсы</a>
+        <a href="prices.html">Услуги</a>
+        <a href="https://t.me/official_vartian" target="_blank">Контакты</a>
+    </div>
+
     <header class="hero">
-        <h1 data-aos="zoom-out">ЭСТЕТИКА, КОТОРАЯ <br><span>ПРОДАЕТ ВАС ВСЕМ</span></h1>
-        <p data-aos="fade-up" data-aos-delay="400">Vartian Agency: создаем высококонверсионный контент для брендов и бизнеса. Мы стираем границы между воображением и реальностью.</p>
-        <div class="hero-btns" data-aos="fade-up" data-aos-delay="600">
-            <a href="portfolio.html" class="btn-main">Смотреть кейсы</a>
-            <a href="prices.html" class="btn-outline">Узнать стоимость</a>
+        <h1 data-aos="zoom-out">МЫ УБИЛИ <br><span>КЛАССИЧЕСКИЙ ПРОДАКШН</span></h1>
+        <p data-aos="fade-up" data-aos-delay="300">Vartian Agency: создаем высококонверсионный контент для брендов и бизнеса. Быстрее, дешевле и эффективнее любого фотографа в мире.</p>
+        <div class="hero-btns" data-aos="fade-up" data-aos-delay="500">
+            <a href="prices.html" class="btn-main">РАССЧИТАТЬ СМЕТУ ПРОЕКТА</a>
+            <a href="portfolio.html" class="btn-outline">СМОТРЕТЬ SHOWREEL</a>
         </div>
     </header>
 
-    <!-- БЛОК С ФОТО 17.JPG -->
-    <section class="about-section">
-        <div class="about-content">
-            <div class="text-block" data-aos="fade-right">
-                <span class="tag">Vartian Agency</span>
-                <h2>Хватит тратить миллионы на контент, который не цепляет</h2>
-                <p>Классические съемки — это дорого, долго и часто не окупается. Мы в Vartian Agency закрываем главную боль брендов: создаем <b>продающий контент</b> мирового уровня без раздутых бюджетов.</p>
-                <p>Пока ваши конкуренты неделями ждут моделей и ищут студии, мы упаковываем ваш продукт в визуал, который цепляет взгляд и конвертирует охваты в продажи за считанные дни.</p>
+    <section class="comparison-section">
+        <div class="section-title-styled" data-aos="fade-up">
+            <h2>ЗАЧЕМ ПЛАТИТЬ БОЛЬШЕ ЗА ТОТ ЖЕ РЕЗУЛЬТАТ?</h2>
+        </div>
+        <div class="comp-container" data-aos="fade-up">
+            <div class="comp-header">
+                <div class="comp-col">ПАРАМЕТР</div>
+                <div class="comp-col">ОБЫЧНАЯ ФОТОСЕССИЯ</div>
+                <div class="comp-col" style="color:var(--accent)">VARTIAN AGENCY</div>
             </div>
-            <div class="image-placeholder" data-aos="fade-left">
-                <!-- Твоя картинка 17.jpg -->
-                <img src="img/17.jpg" alt="Vartian Agency Visual">
+            <div class="comp-row">
+                <div class="comp-label">Бюджет</div>
+                <div class="comp-old">100 000₽+ (Студия, модель, визаж, свет, фотограф)</div>
+                <div class="comp-new">От 15 000₽ (Фиксированная цена за результат)</div>
+            </div>
+            <div class="comp-row">
+                <div class="comp-label">Локации</div>
+                <div class="comp-old">Ограничены городом, погодой и доступностью студий</div>
+                <div class="comp-new">Весь мир: от улиц Токио до поверхности Марса</div>
+            </div>
+            <div class="comp-row">
+                <div class="comp-label">Модели</div>
+                <div class="comp-old">Капризы, плотный график, человеческий фактор</div>
+                <div class="comp-new">Идеальная внешность 24/7, полный контроль эмоций</div>
+            </div>
+            <div class="comp-row">
+                <div class="comp-label">Сроки</div>
+                <div class="comp-old">1-2 недели (организация + съемка + ретушь)</div>
+                <div class="comp-new">Готовый кампейн за 48 часов</div>
             </div>
         </div>
     </section>
 
-    <!-- ПРЕИМУЩЕСТВА -->
     <section class="benefits">
         <div class="section-title-styled" data-aos="fade-up">
-            <span class="tag">WHY US</span>
-            <h2>ПОЧЕМУ ВЫБИРАЮТ НАС?</h2>
+            <h2>ПОЧЕМУ НАМ ДОВЕРЯЮТ?</h2>
         </div>
         <div class="benefit-grid">
-            <div class="benefit-card" data-aos="flip-up"><h3>Тотальная окупаемость</h3><p>Вы получаете визуал мирового уровня без затрат на аренду и моделей. Максимальная маржа вашего бизнеса.</p></div>
-            <div class="benefit-card" data-aos="flip-up" data-aos-delay="200"><h3>Визуальное доминирование</h3><p>Наш контент спроектирован так, чтобы ваши соцсети разрывали алгоритмы за 0.5 секунды.</p></div>
-            <div class="benefit-card" data-aos="flip-up" data-aos-delay="400"><h3>Абсолютная свобода</h3><p>Реализуем любые идеи в любых пространствах. Мы не ограничены физической реальностью.</p></div>
+            <div class="benefit-card" data-aos="fade-up">
+                <h3>Зарабатывайте больше</h3>
+                <p>Мы убираем 80% расходов на продакшн. Пока другие тратят бюджет на билеты моделям, вы инвестируете в маркетинг.</p>
+            </div>
+            <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>Безупречный имидж</h3>
+                <p>Ваш бренд будет выглядеть дороже конкурентов. Мы создаем визуал, который заставляет аудиторию верить в продукт.</p>
+            </div>
+            <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+                <h3>Скорость как оружие</h3>
+                <p>Рынок не ждет. Пока конкуренты только ищут фотографа, мы уже сдаем вам готовый проект для запуска рекламы.</p>
+            </div>
         </div>
     </section>
 
-    <!-- МАНИФЕСТ -->
-    <section class="manifesto">
-        <div class="manifesto-box" data-aos="zoom-in">
-            <span class="alert">MUST HAVE</span>
-            <h2>НЕЙРОСЕТИ — ЭТО БАЗА</h2>
-            <p>Рынок перенасыщен обычным контентом. Сегодня продает только технологичность и безупречный стиль. Либо вы переходите на AI-продакшн с Vartian Agency сейчас, либо завтра ваш проект станет невидимым для рынка.</p>
-            <a href="https://t.me/official_vartian" target="_blank" class="btn-main">ОБСУДИТЬ ПРОДАКШН</a>
+    <section class="founder-section" data-aos="fade-up">
+        <div class="founder-card">
+            <div class="founder-img"><img src="img/17.jpg" alt="Founder"></div>
+            <div class="founder-text">
+                <blockquote>"Мы — Vartian Agency. Мы объединили технологии и искусство, чтобы ваш бизнес зарабатывал больше. Пока конкуренты ищут фотографов, мы уже сдаем вам готовый проект."</blockquote>
+                <div class="founder-name">— Леонид Вартиан, Founder</div>
+            </div>
         </div>
     </section>
 
-    <!-- ЮРИДИЧЕСКИЙ БЛОК -->
+    <section class="contact-section" data-aos="zoom-in">
+        <div class="contact-box">
+            <h2>Обсудим ваш проект?</h2>
+            <p>Свяжитесь со мной напрямую для получения персонального решения.</p>
+            <div class="contact-links">
+                <a href="https://t.me/official_vartian" target="_blank">Telegram</a>
+                <a href="https://instagram.com/твой_ник" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </section>
+
     <div class="legal-footer">
-        <button class="legal-btn" onclick="openModal('oferta')">Публичная оферта</button>
-        <button class="legal-btn" onclick="openModal('agreement')">Пользовательское соглашение</button>
+        <div class="legal-links">
+            <button class="legal-btn" onclick="openModal('oferta')">Публичная оферта</button>
+            <button class="legal-btn" onclick="openModal('agreement')">Правила агентства</button>
+        </div>
+        <div class="copyright">© 2026 VARTIAN AGENCY. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</div>
     </div>
 
-    <!-- МОДАЛКИ С ПОЛНЫМ ТЕКСТОМ -->
+    <!-- ПОЛНЫЕ МОДАЛКИ (ОБЯЗАТЕЛЬНО ТАК) -->
     <div id="oferta" class="modal-overlay" onclick="closeModal('oferta')">
         <div class="modal-content" onclick="event.stopPropagation()">
-            <button class="modal-close" onclick="closeModal('oferta')">&times;</button>
-            <h2 style="margin-bottom:25px;">ПУБЛИЧНАЯ ОФЕРТА</h2>
-            <p>Настоящая оферта является официальным предложением Леонида Вартиана (далее — Исполнитель) для любого физического или юридического лица (далее — Заказчик) заключить договор на оказание услуг по генерации AI-визуала.</p>
-            <p><b>1. Предмет договора:</b> Создание цифровых изображений и видеороликов с использованием нейросетей по техническому заданию Заказчика.</p>
-            <p><b>2. Оплата:</b> Услуги оказываются на условиях 100% предоплаты, если иное не оговорено индивидуально.</p>
-            <p><b>3. Права:</b> Все исключительные права на финальные изображения переходят к Заказчику после полной оплаты.</p>
-        </div>
-    </div>
-    <div id="agreement" class="modal-overlay" onclick="closeModal('agreement')">
-        <div class="modal-content" onclick="event.stopPropagation()">
-            <button class="modal-close" onclick="closeModal('agreement')">&times;</button>
-            <h2 style="margin-bottom:25px;">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</h2>
-            <p>Используя данный сайт, вы соглашаетесь с условиями использования материалов и политикой конфиденциальности.</p>
-            <p><b>1.</b> Сайт носит информационный характер и представляет портфолио AI-креатора Леонида Вартиана.</p>
-            <p><b>2.</b> Копирование и использование изображений из раздела "Портфолио" без разрешения автора запрещено.</p>
-            <p><b>3.</b> Исполнитель не несет ответственности за то, как Заказчик использует сгенерированный контент в дальнейшем.</p>
+            <span class="modal-close" onclick="closeModal('oferta')">&times;</span>
+            <h2>ПУБЛИЧНАЯ ОФЕРТА</h2>
+            <p>Настоящий документ является официальным предложением (Публичной офертой) агентства <b>VARTIAN AGENCY</b> (далее — Исполнитель) по оказанию услуг генерации визуального контента на базе технологий Искусственного Интеллекта.</p>
+            <h3>1. ПРЕДМЕТ СОГЛАШЕНИЯ</h3>
+            <p>Исполнитель обязуется оказать услуги по созданию цифровых изображений и/или видеороликов в соответствии с Техническим Заданием (ТЗ) Заказчика, а Заказчик обязуется оплатить эти услуги.</p>
+            <h3>2. УСЛОВИЯ ОПЛАТЫ И ВОЗВРАТА</h3>
+            <ul>
+                <li>Услуги оказываются на условиях 100% предварительной оплаты.</li>
+                <li>Ввиду специфики использования вычислительных мощностей и затрат токенов нейросетей, денежные средства становятся <b>безвозвратными</b> сразу после начала процесса генерации (стадия «Render»).</li>
+                <li>Отказ от услуг после начала работы не влечет за собой возврат оплаты.</li>
+            </ul>
+            <h3>3. ОСОБЕННОСТИ ТЕХНОЛОГИИ</h3>
+            <p>Заказчик осознает, что ИИ-генерация является вероятностным процессом. Возможные визуальные артефакты признаются допустимыми и устраняются Исполнителем строго в рамках оговоренных раундов правок.</p>
+            <h3>4. ИНТЕЛЛЕКТУАЛЬНЫЕ ПРАВА</h3>
+            <p>Исключительные права на использование финальных материалов переходят к Заказчику в полном объеме только <b>после 100% оплаты</b> оказанных услуг. Исполнитель сохраняет право на размещение работ в своем портфолио.</p>
         </div>
     </div>
 
-    <footer></footer>
+    <div id="agreement" class="modal-overlay" onclick="closeModal('agreement')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeModal('agreement')">&times;</span>
+            <h2>ПРАВИЛА АГЕНТСТВА</h2>
+            <h3>1. ОБЩИЕ ПОЛОЖЕНИЯ</h3>
+            <p>Сайт VARTIAN AGENCY является витриной услуг и портфолио AI-креатора Леонида Вартиана. Используя ресурс, вы подтверждаете свое согласие с данными правилами.</p>
+            <h3>2. СБОР И ХРАНЕНИЕ ДАННЫХ</h3>
+            <p>Мы придерживаемся политики минимального сбора данных:</p>
+            <ul>
+                <li>Мы собираем только те данные, которые вы предоставляете добровольно (имя, ниша бренда, контакт).</li>
+                <li>Персональные данные используются исключительно для связи по вашему проекту.</li>
+                <li>Мы гарантируем, что ваши контакты <b>не будут переданы</b> третьим лицам.</li>
+            </ul>
+            <h3>3. ОТВЕТСТВЕННОСТЬ</h3>
+            <p>Исполнитель не несет ответственности за использование Заказчиком сгенерированного контента в целях, нарушающих законодательство страны Заказчика.</p>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000 });
-        function openModal(id) { 
-            const m = document.getElementById(id);
-            if(m) { m.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
-        }
-        function closeModal(id) { 
-            const m = document.getElementById(id);
-            if(m) { m.style.display = 'none'; document.body.style.overflow = 'auto'; }
-        }
+        AOS.init({ duration: 1000, once: false });
+        const menuBtn = document.getElementById('menuToggle');
+        const fullMenu = document.getElementById('fullMenu');
+        menuBtn.onclick = () => { menuBtn.classList.toggle('active'); fullMenu.classList.toggle('active'); document.body.style.overflow = fullMenu.classList.contains('active') ? 'hidden' : 'auto'; };
+        function openModal(id) { document.getElementById(id).style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+        function closeModal(id) { document.getElementById(id).style.display = 'none'; document.body.style.overflow = 'auto'; }
     </script>
 </body>
 </html>
