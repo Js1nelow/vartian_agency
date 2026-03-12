@@ -111,7 +111,6 @@
         <div class="copyright">© 2026 VARTIAN AGENCY. ВСЕ ПРАВА ЗАЩИЩЕНЫ.</div>
     </div>
 
-    <!-- ПОЛНЫЕ МОДАЛКИ (ОБЯЗАТЕЛЬНО ТАК) -->
     <div id="oferta" class="modal-overlay" onclick="closeModal('oferta')">
         <div class="modal-content" onclick="event.stopPropagation()">
             <span class="modal-close" onclick="closeModal('oferta')">&times;</span>
@@ -161,7 +160,6 @@
             menuBtn.classList.toggle('active', isOpen);
             fullMenu.classList.toggle('active', isOpen);
             menuBtn.setAttribute('aria-expanded', String(isOpen));
-            menuBtn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
             document.body.style.overflow = isOpen ? 'hidden' : 'auto';
         }
 
@@ -171,9 +169,6 @@
                 if (e.target === fullMenu) setMenuOpen(false);
             });
             fullMenu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenuOpen(false)));
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') setMenuOpen(false);
-            });
         }
         function openModal(id) { document.getElementById(id).style.display = 'flex'; document.body.style.overflow = 'hidden'; }
         function closeModal(id) { document.getElementById(id).style.display = 'none'; document.body.style.overflow = 'auto'; }
