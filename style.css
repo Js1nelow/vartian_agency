@@ -29,17 +29,19 @@ body {
 }
 
 /* =========================================
-   МЯГКИЕ ФИОЛЕТОВЫЕ МИНИ-ЗАГОЛОВКИ
+   МЯГКИЕ ФИОЛЕТОВЫЕ МИНИ-ЗАГОЛОВКИ И ТЕГИ
+   (Дизайн для Investment, Static, PACKAGES, Badges и т.д.)
    ========================================= */
 .pre-title, .subtitle, .mini-heading, .section-subtitle, 
-.page-header span, .price-card > span:first-child, .price-card .plan-name,
-.modern-cta > span:first-child, .modern-cta .pre-title, .badge {
+.page-header span, .tag, .badge,
+.price-card .tag, .price-card .badge, .price-section-title .tag,
+.modern-cta > span:first-child, .modern-cta .pre-title, .modern-cta .cta-tag {
     display: block;
     font-size: 0.95rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #b57aff;
+    color: #b57aff; /* Мягкий, благородный фиолетовый */
     margin-bottom: 15px;
 }
 .page-header span { text-align: center; }
@@ -165,7 +167,15 @@ body {
 
 .price-card { background: linear-gradient(145deg, #0f0f0f, #050505); padding: 45px; border-radius: 35px; border: 1px solid var(--border); transition: 0.3s; display: flex; flex-direction: column; }
 .price-card:hover { border-color: rgba(168, 85, 247, 0.4); transform: translateY(-5px); }
-.price-card.exclusive, .price-grid .price-card:nth-last-child(-n+3) { border: 2px solid var(--accent); position: relative; box-shadow: 0 0 30px rgba(168, 85, 247, 0.1); }
+
+/* Автоматическая обводка и свечение у 3-х последних карточек тарифов */
+.price-card.exclusive, 
+.price-grid .price-card:nth-last-child(-n+3) { 
+    border: 2px solid var(--accent); 
+    position: relative; 
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.1); 
+}
+
 .cost { font-size: 2.5rem; font-weight: 900; margin: 20px 0; color: #fff; }
 .price-card ul { list-style: none; margin: 15px 0; flex-grow: 1; }
 .price-card ul li::before { content: "—"; color: var(--accent); margin-right: 12px; font-weight: bold; }
@@ -257,7 +267,7 @@ body {
     .portfolio-grid, .benefits .benefit-grid, .price-grid, .price-grid-top { grid-template-columns: 1fr; } 
     .nav-container { width: 95%; padding: 14px 20px; } 
     
-    /* ФИКС ТЕКСТА HERO - ИДЕАЛЬНАЯ КОМБИНАЦИЯ */
+    /* ФИКС ТЕКСТА HERO ДЛЯ ТЕЛЕФОНА */
     .hero { padding: 0; } 
     .hero h1 { 
         font-size: 9.3vw; 
