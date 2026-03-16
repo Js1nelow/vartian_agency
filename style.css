@@ -28,6 +28,21 @@ body {
     -webkit-font-smoothing: antialiased; 
 }
 
+/* ВОЗВРАЩАЕМ ДИЗАЙН МИНИ-ЗАГОЛОВКОВ (INVESTMENT И Т.Д.) НА ВСЕ СТРАНИЦЫ */
+.pre-title, .subtitle, .mini-heading {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: transparent;
+    background: linear-gradient(90deg, #fff, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 /* =========================================
    2. ЛЕТАЮЩАЯ НАВИГАЦИЯ (LIQUID GLASS)
    ========================================= */
@@ -185,7 +200,7 @@ body {
 .btn-main:hover, .btn-outline:hover { transform: translateY(-4px); box-shadow: 0 10px 40px rgba(168, 85, 247, 0.4); }
 
 /* =========================================
-   АДАПТИВНОСТЬ (МОБИЛКИ) - ФИНАЛЬНЫЕ ПРАВКИ
+   АДАПТИВНОСТЬ (МОБИЛКИ) - ТОТАЛЬНАЯ ПЕРЕСБОРКА
    ========================================= */
 @media (max-width: 1100px) { .portfolio-grid, .benefits .benefit-grid, .price-grid { grid-template-columns: repeat(2, 1fr); } }
 
@@ -193,23 +208,66 @@ body {
     .portfolio-grid, .benefits .benefit-grid, .price-grid, .price-grid-top { grid-template-columns: 1fr; } 
     .nav-container { width: 95%; padding: 14px 20px; } 
     
-    /* ИСПРАВЛЕНИЯ ДЛЯ ГЛАВНОГО ЭКРАНА (HERO) */
-    .hero { padding: 0 5%; }
-    .hero h1 { font-size: 8.5vw; letter-spacing: -1px; margin-bottom: 20px; } /* Слово помещается идеально */
-    .hero p { font-size: 0.95rem; margin-bottom: 35px; opacity: 0.7; padding: 0 10px; } /* Минималистичный текст */
+    /* ФИКС СРЕЗАННОЙ БУКВЫ "Й" */
+    .hero { padding: 0; overflow: hidden; } /* Небольшой фикс контейнера */
+    .hero h1 { 
+        font-size: 9.5vw; 
+        letter-spacing: -1px; 
+        margin-bottom: 20px; 
+        padding: 0 15px; /* Защита от срезания краев */
+        width: 100%;
+        overflow: visible;
+        word-break: keep-all; 
+    } 
+    .hero h1 span { overflow: visible; }
     
-    /* ИСПРАВЛЕНИЯ КНОПОК (ПЛАШЕК) */
-    .hero-btns { flex-direction: column; width: 100%; gap: 12px; }
+    /* УЛУЧШЕНИЕ ТЕКСТА ОПИСАНИЯ */
+    .hero p { 
+        font-size: 1.15rem; /* Сделал крупнее */
+        margin-bottom: 35px; 
+        opacity: 0.85; /* Сделал ярче */
+        padding: 0 20px; 
+    } 
+    
+    /* КНОПКИ */
+    .hero-btns { flex-direction: column; width: 100%; gap: 12px; padding: 0 20px; }
     .btn-main, .btn-outline { width: 100%; padding: 18px 20px; font-size: 0.8rem; }
     
-    /* ИСПРАВЛЕНИЕ КАРТОЧКИ FOUNDER */
+    /* ТОТАЛЬНЫЙ РЕДИЗАЙН ТАБЛИЦЫ ПОД ТЕЛЕФОН */
+    .comp-container { border-radius: 25px; }
+    .comp-header { display: none; } /* Скрываем десктопную шапку */
+    .comp-row { 
+        display: flex; 
+        flex-direction: column; 
+        text-align: center; 
+        padding: 30px 20px; 
+        gap: 15px; 
+        border-top: 1px solid var(--glass-border); 
+    }
+    .comp-label { 
+        font-size: 1.1rem; 
+        color: var(--accent); 
+        letter-spacing: 2px; 
+        margin-bottom: 5px; 
+    }
+    .comp-old { 
+        font-size: 1.05rem; 
+        padding: 0 10px; 
+        text-decoration: line-through; 
+        text-decoration-color: #ff4d4d; 
+    }
+    .comp-new { 
+        font-size: 1.05rem; 
+        padding: 18px; 
+        width: 100%; 
+        border-radius: 15px; 
+    }
+
+    /* ФАУНДЕР И КОНТАКТЫ */
     .founder-card { flex-direction: column; text-align: center; padding: 40px 30px; gap: 30px; }
     .founder-text blockquote { font-size: 1.2rem; }
-
-    /* ИСПРАВЛЕНИЕ БЛОКА КОНТАКТОВ */
     .contact-box { padding: 60px 30px; border-radius: 35px; }
     .contact-box h2 { font-size: 2.2rem; letter-spacing: -1px; }
-
     .modern-cta h2 { font-size: 3.5rem; letter-spacing: -1px; } 
 }
 
