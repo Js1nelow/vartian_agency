@@ -1,5 +1,5 @@
 /* =========================================
-   1. ФУНДАМЕНТ И ПРЕМЕАЛЬНЫЕ ШРИФТЫ
+   1. ФУНДАМЕНТ И ПРЕМИАЛЬНЫЕ ШРИФТЫ
    ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap');
 
@@ -32,14 +32,15 @@ body {
    МЯГКИЕ ФИОЛЕТОВЫЕ МИНИ-ЗАГОЛОВКИ ДЛЯ ВСЕХ СТРАНИЦ
    ========================================= */
 .pre-title, .subtitle, .mini-heading, .section-subtitle, 
-.page-header span, .price-card > span:first-child, .price-card .plan-name {
+.page-header span, .price-card > span:first-child, .price-card .plan-name,
+.modern-cta > span:first-child, .modern-cta .pre-title, .badge {
     display: block;
     font-size: 0.95rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #b57aff; /* Мягкий, благородный фиолетовый */
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 .page-header span { text-align: center; }
 
@@ -81,7 +82,7 @@ body {
 
 .hero h1 { 
     font-size: clamp(2.8rem, 9.5vw, 7.5rem);
-    line-height: 1; /* Даем больше воздуха между строками */
+    line-height: 1; 
     font-weight: 900; 
     letter-spacing: -4px; 
     text-transform: uppercase; 
@@ -159,7 +160,15 @@ body {
 
 .price-card { background: linear-gradient(145deg, #0f0f0f, #050505); padding: 45px; border-radius: 35px; border: 1px solid var(--border); transition: 0.3s; display: flex; flex-direction: column; }
 .price-card:hover { border-color: rgba(168, 85, 247, 0.4); transform: translateY(-5px); }
-.price-card.exclusive { border: 2px solid var(--accent); position: relative; box-shadow: 0 0 30px rgba(168, 85, 247, 0.1); }
+
+/* ТОЛЬКО 3 ПОСЛЕДНИЕ КАРТОЧКИ ПОЛУЧАЮТ ФИОЛЕТОВУЮ ОБВОДКУ */
+.price-card.exclusive, 
+.price-grid .price-card:nth-last-child(-n+3) { 
+    border: 2px solid var(--accent); 
+    position: relative; 
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.1); 
+}
+
 .cost { font-size: 2.5rem; font-weight: 900; margin: 20px 0; color: #fff; }
 .price-card ul { list-style: none; margin: 15px 0; flex-grow: 1; }
 .price-card ul li::before { content: "—"; color: var(--accent); margin-right: 12px; font-weight: bold; }
@@ -179,11 +188,33 @@ body {
 .contact-links a:hover { color: var(--accent); text-underline-offset: 15px; }
 
 /* =========================================
-   10. MODERN CTA & LEGAL
+   10. MODERN CTA & LEGAL (ВЫРОВНЕНО ИДЕАЛЬНО ПО ЛИНИИ)
    ========================================= */
-.modern-cta { padding: 150px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
-.modern-cta h2 { font-size: clamp(3.5rem, 12vw, 8.5rem); font-weight: 900; letter-spacing: -5px; line-height: 0.85; margin-bottom: 50px; text-transform: uppercase;}
-.modern-cta h2 span { color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.3); }
+.modern-cta { 
+    padding: 150px 5%; 
+    text-align: center; 
+    border-top: 1px solid rgba(255,255,255,0.05); 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем всё содержимое строго по вертикальной оси */
+}
+.modern-cta h2 { 
+    font-size: clamp(3.5rem, 12vw, 8.5rem); 
+    font-weight: 900; 
+    letter-spacing: -5px; 
+    line-height: 0.85; 
+    margin-bottom: 40px; 
+    text-transform: uppercase;
+    text-align: center;
+}
+.modern-cta h2 span { color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.3); display: block; }
+.modern-cta p {
+    color: var(--text-dim);
+    font-size: 1.15rem;
+    margin: 0 auto 40px;
+    max-width: 600px;
+    text-align: center;
+}
 
 .legal-footer { padding: 50px 0 80px; text-align: center; }
 .legal-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 25px; }
@@ -212,19 +243,19 @@ body {
     /* ФИКС СРЕЗАННОЙ БУКВЫ "Й" И ОТСТУПОВ МЕЖДУ СЛОВАМИ */
     .hero { padding: 0; overflow: hidden; } 
     .hero h1 { 
-        font-size: 8.8vw; /* Немного уменьшил, чтобы точно поместилось */
-        letter-spacing: -1px; 
+        font-size: 9.3vw; /* Сделал текст крупнее, чтобы больше цеплял */
+        letter-spacing: -2px; 
         margin-bottom: 20px; 
         padding: 0; 
         width: 100%;
-        line-height: 1.15; /* Раздвинул слова по вертикали */
+        line-height: 1.05; /* Уплотнил расстояние между строками */
         overflow: visible;
         word-break: keep-all; 
     } 
     .hero h1 span { 
         overflow: visible; 
         padding-right: 15px; /* Запас пространства справа для Й */
-        padding-bottom: 5px; /* Запас пространства снизу */
+        padding-bottom: 6px; /* Запас пространства снизу */
     }
     
     /* УЛУЧШЕНИЕ ТЕКСТА ОПИСАНИЯ */
@@ -252,7 +283,7 @@ body {
     }
     .comp-label { 
         font-size: 1.1rem; 
-        color: #ffffff; /* Вернул чистый белый цвет */
+        color: #ffffff; 
         letter-spacing: 2px; 
         margin-bottom: 5px; 
     }
@@ -274,7 +305,11 @@ body {
     .founder-text blockquote { font-size: 1.2rem; }
     .contact-box { padding: 60px 30px; border-radius: 35px; }
     .contact-box h2 { font-size: 2.2rem; letter-spacing: -1px; }
-    .modern-cta h2 { font-size: 3.5rem; letter-spacing: -1px; } 
+
+    /* ФИНАЛЬНЫЙ БЛОК */
+    .modern-cta { padding: 100px 5%; }
+    .modern-cta h2 { font-size: 3.5rem; letter-spacing: -1px; margin-bottom: 25px; } 
+    .modern-cta p { font-size: 1rem; margin-bottom: 30px; }
 }
 
 footer { height: 50px; }
