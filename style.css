@@ -28,20 +28,20 @@ body {
     -webkit-font-smoothing: antialiased; 
 }
 
-/* ВОЗВРАЩАЕМ ДИЗАЙН МИНИ-ЗАГОЛОВКОВ (INVESTMENT И Т.Д.) НА ВСЕ СТРАНИЦЫ */
-.pre-title, .subtitle, .mini-heading {
+/* =========================================
+   МЯГКИЕ ФИОЛЕТОВЫЕ МИНИ-ЗАГОЛОВКИ ДЛЯ ВСЕХ СТРАНИЦ
+   ========================================= */
+.pre-title, .subtitle, .mini-heading, .section-subtitle, 
+.page-header span, .price-card > span:first-child, .price-card .plan-name {
     display: block;
     font-size: 0.95rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: transparent;
-    background: linear-gradient(90deg, #fff, var(--accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #b57aff; /* Мягкий, благородный фиолетовый */
     margin-bottom: 10px;
-    text-align: center;
 }
+.page-header span { text-align: center; }
 
 /* =========================================
    2. ЛЕТАЮЩАЯ НАВИГАЦИЯ (LIQUID GLASS)
@@ -81,7 +81,7 @@ body {
 
 .hero h1 { 
     font-size: clamp(2.8rem, 9.5vw, 7.5rem);
-    line-height: 0.85; 
+    line-height: 1; /* Даем больше воздуха между строками */
     font-weight: 900; 
     letter-spacing: -4px; 
     text-transform: uppercase; 
@@ -92,6 +92,7 @@ body {
 
 .hero h1 span { 
     display: block;
+    padding: 5px 15px; /* Защита от срезания буквы Й */
     background: linear-gradient(to bottom, #ffffff 30%, var(--accent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -111,7 +112,7 @@ body {
 .comp-header { display: grid; grid-template-columns: 1fr 1.5fr 1.5fr; padding: 30px; background: rgba(255,255,255,0.02); }
 .comp-col { font-weight: 900; font-size: 0.75rem; text-transform: uppercase; color: var(--text-dim); }
 .comp-row { display: grid; grid-template-columns: 1fr 1.5fr 1.5fr; padding: 40px 30px; border-top: 1px solid var(--glass-border); align-items: center; transition: 0.3s; }
-.comp-label { font-weight: 900; font-size: 1.1rem; text-transform: uppercase; }
+.comp-label { font-weight: 900; font-size: 1.1rem; text-transform: uppercase; color: #fff; }
 .comp-old { color: #555; text-decoration: line-through; text-decoration-color: #ff4d4d; font-size: 1rem; }
 .comp-new { color: #fff; font-weight: 700; padding: 18px 25px; border-radius: 100px; background: rgba(168, 85, 247, 0.08); border: 1px solid var(--accent); }
 
@@ -208,24 +209,29 @@ body {
     .portfolio-grid, .benefits .benefit-grid, .price-grid, .price-grid-top { grid-template-columns: 1fr; } 
     .nav-container { width: 95%; padding: 14px 20px; } 
     
-    /* ФИКС СРЕЗАННОЙ БУКВЫ "Й" */
-    .hero { padding: 0; overflow: hidden; } /* Небольшой фикс контейнера */
+    /* ФИКС СРЕЗАННОЙ БУКВЫ "Й" И ОТСТУПОВ МЕЖДУ СЛОВАМИ */
+    .hero { padding: 0; overflow: hidden; } 
     .hero h1 { 
-        font-size: 9.5vw; 
+        font-size: 8.8vw; /* Немного уменьшил, чтобы точно поместилось */
         letter-spacing: -1px; 
         margin-bottom: 20px; 
-        padding: 0 15px; /* Защита от срезания краев */
+        padding: 0; 
         width: 100%;
+        line-height: 1.15; /* Раздвинул слова по вертикали */
         overflow: visible;
         word-break: keep-all; 
     } 
-    .hero h1 span { overflow: visible; }
+    .hero h1 span { 
+        overflow: visible; 
+        padding-right: 15px; /* Запас пространства справа для Й */
+        padding-bottom: 5px; /* Запас пространства снизу */
+    }
     
     /* УЛУЧШЕНИЕ ТЕКСТА ОПИСАНИЯ */
     .hero p { 
-        font-size: 1.15rem; /* Сделал крупнее */
+        font-size: 1.15rem; 
         margin-bottom: 35px; 
-        opacity: 0.85; /* Сделал ярче */
+        opacity: 0.85; 
         padding: 0 20px; 
     } 
     
@@ -235,7 +241,7 @@ body {
     
     /* ТОТАЛЬНЫЙ РЕДИЗАЙН ТАБЛИЦЫ ПОД ТЕЛЕФОН */
     .comp-container { border-radius: 25px; }
-    .comp-header { display: none; } /* Скрываем десктопную шапку */
+    .comp-header { display: none; } 
     .comp-row { 
         display: flex; 
         flex-direction: column; 
@@ -246,7 +252,7 @@ body {
     }
     .comp-label { 
         font-size: 1.1rem; 
-        color: var(--accent); 
+        color: #ffffff; /* Вернул чистый белый цвет */
         letter-spacing: 2px; 
         margin-bottom: 5px; 
     }
