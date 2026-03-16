@@ -29,7 +29,7 @@ body {
 }
 
 /* =========================================
-   МЯГКИЕ ФИОЛЕТОВЫЕ МИНИ-ЗАГОЛОВКИ ДЛЯ ВСЕХ СТРАНИЦ
+   МЯГКИЕ ФИОЛЕТОВЫЕ МИНИ-ЗАГОЛОВКИ
    ========================================= */
 .pre-title, .subtitle, .mini-heading, .section-subtitle, 
 .page-header span, .price-card > span:first-child, .price-card .plan-name,
@@ -39,7 +39,7 @@ body {
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #b57aff; /* Мягкий, благородный фиолетовый */
+    color: #b57aff;
     margin-bottom: 15px;
 }
 .page-header span { text-align: center; }
@@ -76,13 +76,13 @@ body {
 .full-menu a:hover { color: var(--accent); letter-spacing: 4px; }
 
 /* =========================================
-   3. HERO (ГЛАВНАЯ ФРАЗА)
+   3. HERO (ГЛАВНАЯ ФРАЗА - УМНЫЙ ФИКС БУКВЫ "Й")
    ========================================= */
 .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 5%; }
 
 .hero h1 { 
-    font-size: clamp(2.8rem, 9.5vw, 7.5rem);
-    line-height: 1; 
+    font-size: clamp(3rem, 10vw, 8.5rem);
+    line-height: 1.1; /* Безопасный интервал для рендера градиента */
     font-weight: 900; 
     letter-spacing: -4px; 
     text-transform: uppercase; 
@@ -93,17 +93,22 @@ body {
 
 .hero h1 span { 
     display: block;
-    padding: 5px 15px; /* Защита от срезания буквы Й */
+    padding: 10px 20px 10px 0; /* Делаем коробку рендера огромной, чтобы ничего не резалось */
     background: linear-gradient(to bottom, #ffffff 30%, var(--accent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+/* Стягиваем строки друг к другу вручную */
+.hero h1 span:not(:last-child) {
+    margin-bottom: -25px; 
 }
 
 .hero p { color: var(--text-dim); max-width: 600px; font-size: 1.15rem; margin-bottom: 45px; font-weight: 300; }
 .hero-btns { display: flex; gap: 20px; align-items: center; }
 
 /* =========================================
-   4. ТАБЛИЦА СРАВНЕНИЯ (LIQUID GLASS)
+   4. ТАБЛИЦА СРАВНЕНИЯ
    ========================================= */
 .comparison-section { padding: 120px 8% 80px; }
 .section-title-styled { text-align: center; margin-bottom: 60px; }
@@ -160,15 +165,7 @@ body {
 
 .price-card { background: linear-gradient(145deg, #0f0f0f, #050505); padding: 45px; border-radius: 35px; border: 1px solid var(--border); transition: 0.3s; display: flex; flex-direction: column; }
 .price-card:hover { border-color: rgba(168, 85, 247, 0.4); transform: translateY(-5px); }
-
-/* ТОЛЬКО 3 ПОСЛЕДНИЕ КАРТОЧКИ ПОЛУЧАЮТ ФИОЛЕТОВУЮ ОБВОДКУ */
-.price-card.exclusive, 
-.price-grid .price-card:nth-last-child(-n+3) { 
-    border: 2px solid var(--accent); 
-    position: relative; 
-    box-shadow: 0 0 30px rgba(168, 85, 247, 0.1); 
-}
-
+.price-card.exclusive, .price-grid .price-card:nth-last-child(-n+3) { border: 2px solid var(--accent); position: relative; box-shadow: 0 0 30px rgba(168, 85, 247, 0.1); }
 .cost { font-size: 2.5rem; font-weight: 900; margin: 20px 0; color: #fff; }
 .price-card ul { list-style: none; margin: 15px 0; flex-grow: 1; }
 .price-card ul li::before { content: "—"; color: var(--accent); margin-right: 12px; font-weight: bold; }
@@ -177,10 +174,7 @@ body {
    9. ОБСУДИМ ВАШ ПРОЕКТ
    ========================================= */
 .contact-section { padding: 120px 8%; text-align: center; }
-.contact-box { 
-    background: linear-gradient(180deg, rgba(168, 85, 247, 0.05) 0%, rgba(0,0,0,0) 100%);
-    padding: 100px 50px; border-radius: 50px; border: 1px solid var(--glass-border); max-width: 1100px; margin: 0 auto;
-}
+.contact-box { background: linear-gradient(180deg, rgba(168, 85, 247, 0.05) 0%, rgba(0,0,0,0) 100%); padding: 100px 50px; border-radius: 50px; border: 1px solid var(--glass-border); max-width: 1100px; margin: 0 auto; }
 .contact-box h2 { font-size: clamp(2.5rem, 7vw, 5rem); font-weight: 900; margin-bottom: 25px; text-transform: uppercase; letter-spacing: -2px; }
 .contact-box p { color: var(--text-dim); font-size: 1.2rem; margin-bottom: 50px; font-weight: 300; }
 .contact-links { display: flex; justify-content: center; gap: 40px; }
@@ -188,33 +182,12 @@ body {
 .contact-links a:hover { color: var(--accent); text-underline-offset: 15px; }
 
 /* =========================================
-   10. MODERN CTA & LEGAL (ВЫРОВНЕНО ИДЕАЛЬНО ПО ЛИНИИ)
+   10. MODERN CTA & LEGAL
    ========================================= */
-.modern-cta { 
-    padding: 150px 5%; 
-    text-align: center; 
-    border-top: 1px solid rgba(255,255,255,0.05); 
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Центрируем всё содержимое строго по вертикальной оси */
-}
-.modern-cta h2 { 
-    font-size: clamp(3.5rem, 12vw, 8.5rem); 
-    font-weight: 900; 
-    letter-spacing: -5px; 
-    line-height: 0.85; 
-    margin-bottom: 40px; 
-    text-transform: uppercase;
-    text-align: center;
-}
+.modern-cta { padding: 150px 5%; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); display: flex; flex-direction: column; align-items: center; }
+.modern-cta h2 { font-size: clamp(3.5rem, 12vw, 8.5rem); font-weight: 900; letter-spacing: -5px; line-height: 0.85; margin-bottom: 40px; text-transform: uppercase; text-align: center; }
 .modern-cta h2 span { color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.3); display: block; }
-.modern-cta p {
-    color: var(--text-dim);
-    font-size: 1.15rem;
-    margin: 0 auto 40px;
-    max-width: 600px;
-    text-align: center;
-}
+.modern-cta p { color: var(--text-dim); font-size: 1.15rem; margin: 0 auto 40px; max-width: 600px; text-align: center; }
 
 .legal-footer { padding: 50px 0 80px; text-align: center; }
 .legal-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 25px; }
@@ -222,17 +195,61 @@ body {
 .legal-btn:hover { color: var(--accent); opacity: 1; }
 .copyright { font-size: 0.65rem; color: #333; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; }
 
-.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); display: none; justify-content: center; align-items: center; z-index: 99999; }
-.modal-content { background: #080808; width: 90%; max-width: 650px; border-radius: 40px; padding: 60px 50px; border: 1px solid var(--border); position: relative; max-height: 85vh; overflow-y: auto; text-align: left; }
-.modal-close { position: absolute; top: 30px; right: 30px; color: #fff; font-size: 2.2rem; border: none; background: none; cursor: pointer; line-height: 1; opacity: 0.5; }
-
 /* КНОПКИ */
 .btn-main { display: inline-flex; justify-content: center; align-items: center; background: #fff; color: #000; padding: 22px 50px; border-radius: 100px; text-decoration: none; font-weight: 900; text-transform: uppercase; font-size: 0.85rem; transition: 0.3s; border: none; box-shadow: 0 10px 40px rgba(255, 255, 255, 0.1); }
 .btn-outline { display: inline-flex; justify-content: center; align-items: center; border: 1.5px solid rgba(255, 255, 255, 0.1); color: #fff; padding: 22px 50px; border-radius: 100px; text-decoration: none; font-weight: 900; text-transform: uppercase; font-size: 0.85rem; transition: 0.3s; }
 .btn-main:hover, .btn-outline:hover { transform: translateY(-4px); box-shadow: 0 10px 40px rgba(168, 85, 247, 0.4); }
 
 /* =========================================
-   АДАПТИВНОСТЬ (МОБИЛКИ) - ТОТАЛЬНАЯ ПЕРЕСБОРКА
+   11. ИДЕАЛЬНЫЙ ДИЗАЙН МОДАЛЬНЫХ ОКОН (ДОКУМЕНТЫ)
+   ========================================= */
+.modal-overlay { 
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+    background: rgba(0,0,0,0.85); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); 
+    display: none; justify-content: center; align-items: center; z-index: 99999; 
+    opacity: 0; transition: opacity 0.3s ease;
+}
+.modal-overlay.show { opacity: 1; }
+
+.modal-content { 
+    background: #0f0f0f; 
+    width: 90%; max-width: 650px; 
+    border-radius: 30px; 
+    padding: 50px; 
+    border: 1px solid var(--border); 
+    position: relative; 
+    max-height: 85vh; 
+    overflow-y: auto; 
+    text-align: left; 
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    transform: translateY(20px); transition: transform 0.3s ease;
+}
+.modal-overlay.show .modal-content { transform: translateY(0); }
+
+/* Стилизация скроллбара внутри модалки */
+.modal-content::-webkit-scrollbar { width: 6px; }
+.modal-content::-webkit-scrollbar-track { background: transparent; }
+.modal-content::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
+
+.modal-close { 
+    position: absolute; top: 25px; right: 30px; 
+    color: var(--text-dim); font-size: 2rem; 
+    border: none; background: none; cursor: pointer; 
+    line-height: 1; transition: 0.3s;
+}
+.modal-close:hover { color: #ff4d4d; transform: scale(1.1); }
+
+/* Типографика внутри документов */
+.modal-content h2 { font-size: 1.8rem; font-weight: 900; text-transform: uppercase; letter-spacing: -1px; margin-bottom: 25px; color: #fff; }
+.modal-content h3 { font-size: 1.05rem; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin: 30px 0 15px; }
+.modal-content p { font-size: 0.95rem; line-height: 1.7; color: #d1d1d6; margin-bottom: 15px; font-weight: 300; }
+.modal-content ul { margin-bottom: 20px; padding-left: 20px; }
+.modal-content ul li { font-size: 0.95rem; line-height: 1.7; color: #d1d1d6; font-weight: 300; margin-bottom: 10px; }
+.modal-content ul li::marker { color: var(--accent); }
+.modal-content b { color: #fff; font-weight: 700; }
+
+/* =========================================
+   АДАПТИВНОСТЬ (МОБИЛКИ) 
    ========================================= */
 @media (max-width: 1100px) { .portfolio-grid, .benefits .benefit-grid, .price-grid { grid-template-columns: repeat(2, 1fr); } }
 
@@ -240,76 +257,50 @@ body {
     .portfolio-grid, .benefits .benefit-grid, .price-grid, .price-grid-top { grid-template-columns: 1fr; } 
     .nav-container { width: 95%; padding: 14px 20px; } 
     
-    /* ФИКС СРЕЗАННОЙ БУКВЫ "Й" И ОТСТУПОВ МЕЖДУ СЛОВАМИ */
-    .hero { padding: 0; overflow: hidden; } 
+    /* ФИКС ТЕКСТА HERO - ИДЕАЛЬНАЯ КОМБИНАЦИЯ */
+    .hero { padding: 0; } 
     .hero h1 { 
-        font-size: 9.3vw; /* Сделал текст крупнее, чтобы больше цеплял */
+        font-size: 9.3vw; 
         letter-spacing: -2px; 
         margin-bottom: 20px; 
         padding: 0; 
         width: 100%;
-        line-height: 1.05; /* Уплотнил расстояние между строками */
-        overflow: visible;
+        line-height: 1.1; /* Безопасно для буквы Й */
         word-break: keep-all; 
     } 
     .hero h1 span { 
-        overflow: visible; 
-        padding-right: 15px; /* Запас пространства справа для Й */
-        padding-bottom: 6px; /* Запас пространства снизу */
+        padding: 10px 15px 10px 5px; /* Запас пространства внутри спана */
+    }
+    .hero h1 span:not(:last-child) {
+        margin-bottom: -15px; /* Сдвигаем строки визуально, не ломая коробку рендера */
     }
     
-    /* УЛУЧШЕНИЕ ТЕКСТА ОПИСАНИЯ */
-    .hero p { 
-        font-size: 1.15rem; 
-        margin-bottom: 35px; 
-        opacity: 0.85; 
-        padding: 0 20px; 
-    } 
-    
-    /* КНОПКИ */
+    .hero p { font-size: 1.15rem; margin-bottom: 35px; opacity: 0.85; padding: 0 20px; } 
     .hero-btns { flex-direction: column; width: 100%; gap: 12px; padding: 0 20px; }
     .btn-main, .btn-outline { width: 100%; padding: 18px 20px; font-size: 0.8rem; }
     
-    /* ТОТАЛЬНЫЙ РЕДИЗАЙН ТАБЛИЦЫ ПОД ТЕЛЕФОН */
     .comp-container { border-radius: 25px; }
     .comp-header { display: none; } 
-    .comp-row { 
-        display: flex; 
-        flex-direction: column; 
-        text-align: center; 
-        padding: 30px 20px; 
-        gap: 15px; 
-        border-top: 1px solid var(--glass-border); 
-    }
-    .comp-label { 
-        font-size: 1.1rem; 
-        color: #ffffff; 
-        letter-spacing: 2px; 
-        margin-bottom: 5px; 
-    }
-    .comp-old { 
-        font-size: 1.05rem; 
-        padding: 0 10px; 
-        text-decoration: line-through; 
-        text-decoration-color: #ff4d4d; 
-    }
-    .comp-new { 
-        font-size: 1.05rem; 
-        padding: 18px; 
-        width: 100%; 
-        border-radius: 15px; 
-    }
+    .comp-row { display: flex; flex-direction: column; text-align: center; padding: 30px 20px; gap: 15px; border-top: 1px solid var(--glass-border); }
+    .comp-label { font-size: 1.1rem; color: #ffffff; letter-spacing: 2px; margin-bottom: 5px; }
+    .comp-old { font-size: 1.05rem; padding: 0 10px; text-decoration: line-through; text-decoration-color: #ff4d4d; }
+    .comp-new { font-size: 1.05rem; padding: 18px; width: 100%; border-radius: 15px; }
 
-    /* ФАУНДЕР И КОНТАКТЫ */
     .founder-card { flex-direction: column; text-align: center; padding: 40px 30px; gap: 30px; }
     .founder-text blockquote { font-size: 1.2rem; }
     .contact-box { padding: 60px 30px; border-radius: 35px; }
     .contact-box h2 { font-size: 2.2rem; letter-spacing: -1px; }
 
-    /* ФИНАЛЬНЫЙ БЛОК */
     .modern-cta { padding: 100px 5%; }
     .modern-cta h2 { font-size: 3.5rem; letter-spacing: -1px; margin-bottom: 25px; } 
     .modern-cta p { font-size: 1rem; margin-bottom: 30px; }
+
+    /* Адаптация модалки под мобильные */
+    .modal-content { padding: 35px 25px; border-radius: 24px; }
+    .modal-close { top: 15px; right: 20px; }
+    .modal-content h2 { font-size: 1.4rem; }
+    .modal-content h3 { font-size: 0.95rem; }
+    .modal-content p, .modal-content ul li { font-size: 0.85rem; }
 }
 
 footer { height: 50px; }
