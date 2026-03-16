@@ -60,23 +60,23 @@ body {
 .full-menu a:hover { color: var(--accent); letter-spacing: 4px; }
 
 /* =========================================
-   3. HERO (ГЛАВНАЯ ФРАЗА - ФИКС ПЕРЕНОСОВ)
+   3. HERO (ГЛАВНАЯ ФРАЗА)
    ========================================= */
 .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 5%; }
 
 .hero h1 { 
-    font-size: clamp(2.8rem, 9.5vw, 7.5rem); /* Динамичный размер */
+    font-size: clamp(2.8rem, 9.5vw, 7.5rem);
     line-height: 0.85; 
     font-weight: 900; 
     letter-spacing: -4px; 
     text-transform: uppercase; 
     margin-bottom: 25px; 
     color: #fff;
-    white-space: nowrap; /* ЗАПРЕТ ПЕРЕНОСА СЛОВ */
+    white-space: nowrap;
 }
 
 .hero h1 span { 
-    display: block; /* Каждое слово/блок на своей строке */
+    display: block;
     background: linear-gradient(to bottom, #ffffff 30%, var(--accent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -121,7 +121,7 @@ body {
 .founder-name { font-weight: 900; font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 2px; }
 
 /* =========================================
-   7. ПОРТФОЛИО (3 КОЛОНКИ)
+   7. ПОРТФОЛИО
    ========================================= */
 .content-page { padding: 160px 8% 100px; }
 .page-header { text-align: center; margin-bottom: 80px; }
@@ -134,7 +134,7 @@ body {
 .portfolio-item:hover .item-overlay { opacity: 1; }
 
 /* =========================================
-   8. ПРАЙС ГРИД (3 КОЛОНКИ)
+   8. ПРАЙС ГРИД
    ========================================= */
 .price-grid-top { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 1100px; margin: 0 auto 50px; }
 .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; max-width: 1400px; margin: 0 auto; }
@@ -149,7 +149,7 @@ body {
 .price-card ul li::before { content: "—"; color: var(--accent); margin-right: 12px; font-weight: bold; }
 
 /* =========================================
-   9. ОБСУДИМ ВАШ ПРОЕКТ (CINEMATIC)
+   9. ОБСУДИМ ВАШ ПРОЕКТ
    ========================================= */
 .contact-section { padding: 120px 8%; text-align: center; }
 .contact-box { 
@@ -180,16 +180,36 @@ body {
 .modal-close { position: absolute; top: 30px; right: 30px; color: #fff; font-size: 2.2rem; border: none; background: none; cursor: pointer; line-height: 1; opacity: 0.5; }
 
 /* КНОПКИ */
-.btn-main { display: inline-block; background: #fff; color: #000; padding: 22px 50px; border-radius: 100px; text-decoration: none; font-weight: 900; text-transform: uppercase; font-size: 0.85rem; transition: 0.3s; border: none; box-shadow: 0 10px 40px rgba(255, 255, 255, 0.1); }
-.btn-outline { border: 1.5px solid rgba(255, 255, 255, 0.1); color: #fff; padding: 22px 50px; border-radius: 100px; text-decoration: none; font-weight: 900; text-transform: uppercase; font-size: 0.85rem; }
+.btn-main { display: inline-flex; justify-content: center; align-items: center; background: #fff; color: #000; padding: 22px 50px; border-radius: 100px; text-decoration: none; font-weight: 900; text-transform: uppercase; font-size: 0.85rem; transition: 0.3s; border: none; box-shadow: 0 10px 40px rgba(255, 255, 255, 0.1); }
+.btn-outline { display: inline-flex; justify-content: center; align-items: center; border: 1.5px solid rgba(255, 255, 255, 0.1); color: #fff; padding: 22px 50px; border-radius: 100px; text-decoration: none; font-weight: 900; text-transform: uppercase; font-size: 0.85rem; transition: 0.3s; }
 .btn-main:hover, .btn-outline:hover { transform: translateY(-4px); box-shadow: 0 10px 40px rgba(168, 85, 247, 0.4); }
 
-/* АДАПТИВНОСТЬ (МОБИЛКИ) */
+/* =========================================
+   АДАПТИВНОСТЬ (МОБИЛКИ) - ФИНАЛЬНЫЕ ПРАВКИ
+   ========================================= */
 @media (max-width: 1100px) { .portfolio-grid, .benefits .benefit-grid, .price-grid { grid-template-columns: repeat(2, 1fr); } }
+
 @media (max-width: 768px) { 
     .portfolio-grid, .benefits .benefit-grid, .price-grid, .price-grid-top { grid-template-columns: 1fr; } 
     .nav-container { width: 95%; padding: 14px 20px; } 
-    .hero h1 { font-size: 11vw; letter-spacing: -2px; } /* АДАПТИВНЫЙ РАЗМЕР ДЛЯ ТЕЛЕФОНА */
+    
+    /* ИСПРАВЛЕНИЯ ДЛЯ ГЛАВНОГО ЭКРАНА (HERO) */
+    .hero { padding: 0 5%; }
+    .hero h1 { font-size: 8.5vw; letter-spacing: -1px; margin-bottom: 20px; } /* Слово помещается идеально */
+    .hero p { font-size: 0.95rem; margin-bottom: 35px; opacity: 0.7; padding: 0 10px; } /* Минималистичный текст */
+    
+    /* ИСПРАВЛЕНИЯ КНОПОК (ПЛАШЕК) */
+    .hero-btns { flex-direction: column; width: 100%; gap: 12px; }
+    .btn-main, .btn-outline { width: 100%; padding: 18px 20px; font-size: 0.8rem; }
+    
+    /* ИСПРАВЛЕНИЕ КАРТОЧКИ FOUNDER */
+    .founder-card { flex-direction: column; text-align: center; padding: 40px 30px; gap: 30px; }
+    .founder-text blockquote { font-size: 1.2rem; }
+
+    /* ИСПРАВЛЕНИЕ БЛОКА КОНТАКТОВ */
+    .contact-box { padding: 60px 30px; border-radius: 35px; }
+    .contact-box h2 { font-size: 2.2rem; letter-spacing: -1px; }
+
     .modern-cta h2 { font-size: 3.5rem; letter-spacing: -1px; } 
 }
 
